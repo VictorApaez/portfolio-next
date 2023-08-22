@@ -3,25 +3,35 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color-1: 250, 250, 250; /* rgb(250, 250, 250) */
+  --primary-color-2: 230, 230, 230; /* rgb(230, 230, 230) */
+  --primary-color-3: 200, 200, 200; /* rgb(200, 200, 200) */
+
+  /* Accent colors: Teal and Ruby/Scarlet */
+  --accent-color-1: 0, 173, 239; /* rgb(0, 173, 239) */
+  --accent-color-2: 205, 38, 38; /* rgb(205, 38, 38) */
+  --accent-color-3: 0, 150, 200; /* rgb(0, 150, 200) */
+
+  /* Text colors */
+  --text-color-header: 50, 50, 50; /* rgb(50, 50, 50) */
+  --text-color-primary: 80, 80, 80; /* rgb(80, 80, 80) */
+
+  /* Border color */
+  --border-color-primary: 220, 220, 220; /* rgb(220, 220, 220) */
+
+  /* Button color */
+  --button-color-primary: 0, 173, 239; /* rgb(0, 173, 239) */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+div#wrapper.dark-mode {
+  --primary-color-1: 28, 47, 63; /* rgb(28, 47, 63)  */
+  --primary-color-2: 13, 32, 48; /* rgb(13, 32, 48) */
+  --primary-color-3: 1, 12, 28; /* rgb(1, 12, 28)  */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* Text colors */
+  --text-color-header: 210, 215, 220; /* rgb(210, 215, 220) */
+  --text-color-primary: 200, 200, 200; /* rgb(250, 250, 250) */
+
+  /* Border color */
+  --border-color-primary: 0, 0, 0; /* rgb(180, 220, 220) */
 }
