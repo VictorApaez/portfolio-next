@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { useTheme } from "../(context)/ThemeProvider";
+import { useTheme } from "../context/ThemeProvider";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();

@@ -1,8 +1,10 @@
 "use client";
 import "./globals.css";
-import type { Metadata } from "next";
-import { ThemeProvider } from "./(context)/ThemeProvider";
-import { useTheme } from "./(context)/ThemeProvider";
+import { ThemeProvider } from "../context/ThemeProvider";
+import { useTheme } from "../context/ThemeProvider";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import ColorPalette from "@/components/ColorPalette";
 
 export default function RootLayout({
   children,
@@ -14,9 +16,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
-          <nav>This is the nav</nav>
-          <main>{children}</main>
-          <footer>This is the footer</footer>
+          <Header />
+          {children}
+          <Footer />
+          <ColorPalette />
         </ThemeProvider>
       </body>
     </html>
