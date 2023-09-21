@@ -22,6 +22,7 @@ const config: Config = {
         content: {
           header: "rgb(var(--text-color-header))",
           primary: "rgb(var(--text-color-primary))",
+          secondary: "rgb(var(--text-color-secondary))",
         },
         lines: {
           primary: "rgb(var(--border-color-primary))",
@@ -29,6 +30,10 @@ const config: Config = {
         button: {
           primary: "rgb(var(--button-color-primary))",
         },
+      },
+
+      boxShadow: {
+        primary: "0 20px 50px rgba(var(--accent-color-3), 0.7)",
       },
     },
   },
