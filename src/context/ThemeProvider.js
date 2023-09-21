@@ -8,13 +8,13 @@ export const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div
+      <body
         id="wrapper"
         className={`${theme === "dark" ? "dark-mode" : ""} bg-primary-1
         text-content-primary`}
       >
         {children}
-      </div>
+      </body>
     </ThemeContext.Provider>
   );
 };
