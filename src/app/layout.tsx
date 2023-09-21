@@ -14,14 +14,12 @@ export default function RootLayout({
   const theme = useTheme();
   return (
     <html lang="en">
-      <body>
-        <ThemeProvider>
-          <Header />
-          {children}
-          <Footer />
-          <ColorPalette />
-        </ThemeProvider>
-      </body>
+      <ThemeProvider>
+        <Header />
+        {children}
+        <Footer />
+        <ColorPalette />
+      </ThemeProvider>
     </html>
   );
 }
