@@ -23,7 +23,7 @@
   --button-color-primary: 0, 173, 239; /* rgb(0, 173, 239) */
 }
 
-div#wrapper.dark-mode {
+#wrapper.dark-mode {
   --primary-color-1: 28, 47, 63; /* rgb(28, 47, 63)  */
   --primary-color-2: 13, 32, 48; /* rgb(13, 32, 48) */
   --primary-color-3: 1, 12, 28; /* rgb(1, 12, 28)  */
