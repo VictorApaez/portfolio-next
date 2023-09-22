@@ -4,18 +4,6 @@ import { Carousel } from "./Carousel";
 export default function Skills() {
   const icons = [
     {
-      name: "React Native",
-      url: "https://img.icons8.com/ios/100/react-native--v1.png",
-    },
-    {
-      name: "Next",
-      url: "https://img.icons8.com/color/100/nextjs.png",
-    },
-    {
-      name: "React",
-      url: "https://img.icons8.com/officel/100/react.png",
-    },
-    {
       name: "HTML5",
       url: "https://img.icons8.com/color/100/html-5--v1.png",
     },
@@ -31,6 +19,18 @@ export default function Skills() {
     {
       name: "Python",
       url: "https://img.icons8.com/color/100/python--v1.png",
+    },
+    {
+      name: "React Native",
+      url: "https://img.icons8.com/ios/100/react-native--v1.png",
+    },
+    {
+      name: "Next",
+      url: "https://img.icons8.com/color/100/nextjs.png",
+    },
+    {
+      name: "React",
+      url: "https://img.icons8.com/officel/100/react.png",
     },
     {
       name: "MongoDB",
