@@ -10,7 +10,7 @@ type CarouselProp = {
 
 export const Carousel: React.FC<CarouselProp> = ({ icons }) => {
   return (
-    <div className="carousel-container bg-slate-200 shadow-primary">
+    <div className="carousel-container bg-slate-200 shadow-primary relative rounded-lg">
       <div className="carousel-images-container scroll-1">
         {icons.map((icon, i) => (
           <div className="carousel-image-container ">
@@ -39,6 +39,9 @@ export const Carousel: React.FC<CarouselProp> = ({ icons }) => {
           </div>
         ))}
       </div>
+
+      <div className=" absolute top-0 w-32 h-full z-10 bg-gradient-to-r from-slate-200 to-transparent " />
+      <div className=" absolute top-0 right-0 w-32 h-full z-10 bg-gradient-to-l from-slate-200 to-transparent" />
     </div>
   );
 };
