@@ -37,3 +37,7 @@
   /* Border color */
   --border-color-primary: 0, 0, 0; /* rgb(180, 220, 220) */
 }
+
+body {
+  font-family: "roboto";
+}
