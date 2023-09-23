@@ -7,6 +7,12 @@ export default function Main() {
   return (
     <main>
       <Home />
+      <div
+        className="z-40 h-28"
+        style={{
+          background: "linear-gradient(to bottom, #002A28, transparent)",
+        }}
+      />
       <About />
       <Skills />
       <Projects />
