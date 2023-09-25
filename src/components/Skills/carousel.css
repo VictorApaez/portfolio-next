@@ -1,10 +1,11 @@
 .carousel-container {
   display: flex;
   overflow: hidden;
-  width: 80%;
+  width: 90%;
   position: relative;
   height: 200px;
   align-items: center;
+  rotate: -3deg;
 }
 
 .carousel-images-container {
