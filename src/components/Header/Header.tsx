@@ -1,7 +1,31 @@
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import React from "react";
+import { motion } from "framer-motion";
 
 export default function Header() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = document.documentElement.scrollTop;
+      if (currentScrollTop <= 0) {
+        setIsVisible(true);
+      } else if (currentScrollTop > lastScrollTop) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      setLastScrollTop(currentScrollTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollTop]);
+
   const navItems = [
     { path: "#home", name: "Home" },
     { path: "#about", name: "About" },
@@ -11,16 +35,26 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-primary-2 p-4 flex flex-row justify-center">
+    <motion.header
+      initial={{ y: 0 }}
+      animate={{ y: isVisible ? 0 : "-100%" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="bg-primary-2 p-4 flex flex-row justify-center fixed top-0 w-full z-50"
+    >
       <nav>
-        <ul className="flex flex-row justify-center">
+        <ul className="flex flex-row justify-center space-x-4">
           {navItems.map((item) => (
-            <li className="m-2">
-              <Link href={item.path}>{item.name}</Link>
+            <li key={item.name}>
+              <Link
+                href={item.path}
+                className="text-xl p-2 hover:bg-primary-1 hover:text-white rounded-lg transition-all duration-200 ease-in-out"
+              >
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
       </nav>
-    </header>
+    </motion.header>
   );
 }
