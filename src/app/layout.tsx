@@ -2,10 +2,10 @@
 import "./globals.css";
 import { ThemeProvider } from "../context/ThemeProvider";
 import { useTheme } from "../context/ThemeProvider";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-import ColorPalette from "@/components/ColorPalette";
-import { SocialsBar } from "@/components/Socials/SocialsBar";
+import Header from "@/screens/Header/Header";
+import Footer from "@/screens/Footer/Footer";
+import ColorPalette from "@/screens/ColorPalette";
+import { SocialsBar } from "@/screens/Socials/SocialsBar";
 
 export default function RootLayout({
   children,
