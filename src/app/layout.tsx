@@ -5,6 +5,7 @@ import { useTheme } from "../context/ThemeProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import ColorPalette from "@/components/ColorPalette";
+import { SocialsBar } from "@/components/Socials/SocialsBar";
 
 export default function RootLayout({
   children,
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeProvider>
+        <SocialsBar />
         <Header />
         {children}
         <Footer />
