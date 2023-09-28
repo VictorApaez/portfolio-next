@@ -24,7 +24,7 @@ export type ProjectType = {
   shortDesc: string;
   icons: Icon[];
   isLive: boolean;
-  demoLink: string;
+  demoLink?: string;
   githubLink: string;
 };
 
@@ -32,12 +32,12 @@ export const projects: ProjectType[] = [
   {
     demoLink: "https://the-book-swap.netlify.app/",
     githubLink: "https://github.com/VictorApaez/book-swap",
-    imgUrl: "meow.jpg",
+    imgUrl: "book-swap.png",
     alt: "Image of the web app the book swap",
     name: "The Book Swap",
     shortDesc:
       "Users can search for a specific book, or browse through a list of books available online.",
-    icons: [mongodb, react, express, nodejs],
+    icons: [react, redux, express, nodejs, mongodb],
     isLive: true,
   },
   {
@@ -70,7 +70,7 @@ export const projects: ProjectType[] = [
     name: "League of Legends",
     shortDesc:
       "This web application helps gamers search and build teams with their favorite characters and items.",
-    icons: [mongodb, react, express, nodejs, jwt],
+    icons: [react, express, nodejs, jwt, mongodb],
     isLive: true,
   },
   {
@@ -92,7 +92,47 @@ export const projects: ProjectType[] = [
     name: "Breddit",
     shortDesc:
       "Inspired by Reddit, this web application is a network of communities where people can share their interests and ideas.",
-    icons: [mongodb, react, express, nodejs],
+    icons: [react, express, nodejs, mongodb],
     isLive: true,
+  },
+  {
+    githubLink: "https://github.com/VictorApaez/volunteer-connect",
+    imgUrl: "volunteer-connect.png",
+    alt: "Image of Volunteer Connect",
+    name: "Volunteer Connect",
+    shortDesc:
+      "This web application is designed for companies and users to find volunteer opportunities through posts and comments.",
+    icons: [react, redux, nodejs, jwt, mongodb],
+    isLive: false,
+  },
+  {
+    githubLink: "https://github.com/VictorApaez/minesweeper-python",
+    imgUrl: "minesweeper.png",
+    alt: "Image of Minesweeper",
+    name: "Minesweeper",
+    shortDesc:
+      "Minesweeper is a classic puzzle game implemented using Python, Tkinter, and Object-Oriented Programming",
+    icons: [python],
+    isLive: false,
+  },
+  {
+    githubLink: "https://github.com/VictorApaez/calculator-gui-python",
+    imgUrl: "calculator-app.png",
+    alt: "Image of Calculator app",
+    name: "Calculator",
+    shortDesc:
+      "This calculator application was built with Kivy in Python and Test Driven Development practices using pytest.",
+    icons: [python],
+    isLive: false,
+  },
+  {
+    githubLink: "https://github.com/VictorApaez/fractal-tree-python",
+    imgUrl: "fractal-tree.png",
+    alt: "Image of Fractal Tree",
+    name: "Fractal Tree",
+    shortDesc:
+      "This project uses Python's turtle module to animate a drawing of a fractal tree.",
+    icons: [python],
+    isLive: false,
   },
 ];
