@@ -58,7 +58,7 @@ export default function Skills() {
     },
   ];
   return (
-    <section id="skills" className="flex justify-center">
+    <section id="skills" className="flex justify-center w-full">
       <Carousel icons={icons} />
     </section>
   );
