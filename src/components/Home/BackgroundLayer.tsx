@@ -16,13 +16,14 @@ export const BackgroundLayer: React.FC<BackgroundLayerProps> = ({
 }) => {
   return (
     <motion.div
-      className={`absolute inset-0 z-${zIndex}`}
+      className={`absolute inset-0`}
       style={{
         backgroundImage: `url(/${img})`,
         backgroundPosition: `${bgPosition}`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         y: y,
+        zIndex: zIndex,
       }}
     />
   );

@@ -9,7 +9,7 @@ export default function Home() {
     <section
       ref={containerRef}
       id="home"
-      className=" h-screen relative overflow-hidden flex flex-col justify-between"
+      className="z-0 h-screen relative overflow-hidden flex flex-col justify-between"
     >
       <Content y={textY} />
 
