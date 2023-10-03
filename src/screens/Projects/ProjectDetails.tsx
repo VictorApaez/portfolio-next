@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { motion, useAnimation } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
 import { ProjectType } from "@/data/projects";
 import { StackIcons } from "./StackIcons";
 import Link from "next/link";
@@ -10,50 +10,44 @@ type ProjectsProps = {
 };
 
 export const ProjectDetails: React.FC<ProjectsProps> = ({ project }) => {
-  const imageControls = useAnimation();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end start", "start end"],
+  });
 
-  const handleHoverStart = () => {
-    imageControls.start({
-      scale: 1.1,
-      transition: { duration: 0.3 },
-    });
-  };
-
-  const handleHoverEnd = () => {
-    imageControls.start({
-      scale: 1,
-      transition: { duration: 0.3 },
-    });
-  };
-
-  const { name, alt, shortDesc, imgUrl, icons, isLive, demoLink, githubLink } =
-    project;
+  const distanceToTravel = window.innerHeight * 0.7;
+  const y = useTransform(scrollYProgress, [0, 1], [0, -distanceToTravel]);
+  const { imgUrl, icons, isLive, demoLink, githubLink } = project;
 
   return (
-    <motion.div
-      onMouseEnter={handleHoverStart}
-      onMouseLeave={handleHoverEnd}
-      className="flex-grow max-w-sm rounded-2xl overflow-hidden transform transition-transform duration-300 hover:scale-105 bg-primary-3 mb-10 w-96 z-10  flex flex-col justify-between"
+    <div
+      ref={ref}
       style={{
-        boxShadow:
-          "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px",
+        height: "80vh",
+        overflow: "hidden",
+        width: "100%",
+        position: "relative",
+        border: "2px solid white",
       }}
     >
-      <motion.img
-        src={imgUrl}
-        alt={alt}
-        initial={{ scale: 1 }}
-        animate={imageControls}
-        className=" h-48 object-cover"
-      />
-
-      <motion.div className="z-40 p-8 flex flex-col justify-between h-full">
-        <div>
-          <h2 className="font-bold text-3xl mb-2 text-stone-50">{name}</h2>
-          <p className="text-base text-xl mb-2">{shortDesc}</p>
-        </div>
-        <div>
-          <StackIcons icons={icons} />
+      <motion.div
+        style={{
+          y: y,
+          height: "120vh",
+          width: "100%",
+          background: `url(${project.imgUrl}) 0% 0% / cover no-repeat`,
+          backgroundPosition: "center",
+        }}
+      ></motion.div>
+      <div
+        className="h-full w-full absolute top-0 p-32"
+        style={{ background: "rgba(0, 0, 0, 0.7)", zIndex: 2 }}
+      >
+        <div className="flex flex-col justify-center place-items-start h-full">
+          <h1 className="bold text-8xl">{project.name}</h1>
+          {/* <p className="max-w-lg text-xl">{project.shortDesc}</p> */}
+          {/* <StackIcons icons={icons} /> */}
           <div className="m-2">
             {isLive && (
               <Link href={demoLink || ""} target="_blank">
@@ -75,7 +69,7 @@ export const ProjectDetails: React.FC<ProjectsProps> = ({ project }) => {
             </Link>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
