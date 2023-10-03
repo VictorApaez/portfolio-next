@@ -1,0 +1,54 @@
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+.carousel-images-container {
+  display: flex;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 1000px;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: absolute;
+  height: 100%;
+  align-items: center;
+}
+
+.carousel-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.scroll-1 {
+  animation-name: scroll1;
+}
+
+@keyframes scroll1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1000px);
+  }
+}
+
+.scroll-2 {
+  animation-name: scroll2;
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
