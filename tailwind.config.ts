@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "gradient-0": "linear-gradient(0deg, #000, #14213D)",
+        "gradient-180": "linear-gradient(180deg, #000, #14213D)",
+      },
       colors: {
         cloud: "#EEEEEE",
         primary: {

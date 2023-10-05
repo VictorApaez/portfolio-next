@@ -10,7 +10,7 @@ const useScrollAnimations = () => {
   });
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "400%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
   const defaultY = useTransform(scrollYProgress, [0, 1], ["0%", "0%"]);
 
   return {

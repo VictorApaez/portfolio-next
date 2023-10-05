@@ -7,7 +7,7 @@ export const HexBackground = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["-0500px start", "end start"],
+    offset: ["-500px start", "end start"],
   });
 
   const y1 = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
@@ -20,7 +20,7 @@ export const HexBackground = () => {
         src="hexagon.svg"
         alt=""
         className="absolute z-0"
-        style={{ width: "25%", left: "33%", top: `-10%`, y: y1 }}
+        style={{ width: "25%", left: "33%", top: `10%`, y: y1 }}
       />
       <motion.img
         src="hexagon.svg"
@@ -32,7 +32,7 @@ export const HexBackground = () => {
         src="hexagon.svg"
         alt=""
         className="absolute z-0"
-        style={{ width: "25%", right: "10%", bottom: "5%", y: y3 }}
+        style={{ width: "25%", right: "5%", bottom: "5%", y: y3 }}
       />
     </div>
   );

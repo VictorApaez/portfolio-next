@@ -5,7 +5,7 @@ import { useTheme } from "../context/ThemeProvider";
 import Header from "@/screens/Header/Header";
 import Footer from "@/screens/Footer/Footer";
 import ColorPalette from "@/screens/ColorPalette";
-import { SocialsBar } from "@/screens/Socials/SocialsBar";
+import { SocialsBar } from "@/components/SocialsBar";
 
 export default function RootLayout({
   children,

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="p-10 flex justify-center">
+    <section id="contact" className="p-10 flex justify-center bg-gradient-180">
       <div
         className="rounded-2xl p-10 max-w-fit  bg-primary-2"
         style={{

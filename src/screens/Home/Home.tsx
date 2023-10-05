@@ -1,7 +1,6 @@
 "use client";
 import useScrollAnimations from "@/hooks/useScrollAnimation";
 import { Content } from "./Content";
-import { BackgroundLayer } from "./BackgroundLayer";
 export default function Home() {
   const { containerRef, backgroundY, textY, defaultY } = useScrollAnimations();
 
@@ -9,23 +8,29 @@ export default function Home() {
     <section
       ref={containerRef}
       id="home"
-      className="z-0 h-screen relative overflow-hidden flex flex-col justify-between"
+      className="z-0 h-screen relative overflow-hidden flex flex-col justify-center place-items-center bg-gradient-180"
     >
+      <div>
+        <div
+          style={{
+            width: "100%",
+            height: "0",
+            paddingBottom: "100%",
+            position: "relative",
+          }}
+        >
+          <iframe
+            src="https://giphy.com/embed/4py1xViBIYItLTKTYQ"
+            width="200px"
+            height="200px"
+            style={{ position: "absolute" }}
+            className="giphy-embed"
+            allowFullScreen
+          />
+        </div>
+      </div>
+
       <Content y={textY} />
-
-      <BackgroundLayer
-        zIndex={0}
-        img={"back-layer.svg"}
-        y={backgroundY}
-        bgPosition={"55% 200px"}
-      />
-
-      <BackgroundLayer
-        zIndex={20}
-        img={"front-layer.svg"}
-        y={defaultY}
-        bgPosition={"55% 50px"}
-      />
     </section>
   );
 }

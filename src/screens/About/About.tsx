@@ -6,9 +6,27 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { Carousel } from "./Carousel";
 
 export default function About() {
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["-60% start", "end start"],
+  });
+  const parallaxY = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
+
   return (
-    <section id="about" className="p-20 position relative  h-screen ">
-      <div className="flex justify-between relative z-20 ">
+    <section
+      id="about"
+      className="px-20 position relative h-screen"
+      style={{
+        backgroundImage:
+          "url('hex-bg.svg'), linear-gradient(0deg, #000, #14213D)",
+      }}
+      ref={sectionRef}
+    >
+      <motion.div
+        className="flex justify-between relative z-20"
+        style={{ y: parallaxY }}
+      >
         <div className="flex flex-col w-5/6 rounded-lg p-4">
           <SectionHeader header="About me" />
 
@@ -43,15 +61,6 @@ export default function About() {
               </button>
             </div>
           </div>
-          {/* <div className="w-full bg-black mt-10 bg-opacity-50 bg-black p-4 flex justify-center place-items-center  mt-5 rounded-lg">
-            <ul className=" flex flex-wrap">
-              {iconsArray.map((icon, i) => (
-                <li>
-                  <img src={icon.url} alt={icon.name} style={{ height: 80 }} />
-                </li>
-              ))}
-            </ul>
-          </div> */}
         </div>
 
         <div className=" flex flex-col place-items-center ">
@@ -66,8 +75,7 @@ export default function About() {
             className="w-1/2 -mt-24"
           />
         </div>
-      </div>
-      <HexBackground />
+      </motion.div>
     </section>
   );
 }
