@@ -132,6 +132,46 @@ export const iconsObject: IconsObject = {
     isBackEnd: true,
     isDevOps: false,
   },
+  jira: {
+    name: "Jira",
+    url: "https://img.icons8.com/color/100/jira.png",
+    alt: "Jira Logo",
+    isFrontEnd: false,
+    isBackEnd: false,
+    isDevOps: true,
+  },
+  confluence: {
+    name: "Confluence",
+    url: "https://img.icons8.com/color/100/confluence--v2.png",
+    alt: "JWT Logo",
+    isFrontEnd: false,
+    isBackEnd: false,
+    isDevOps: true,
+  },
+  git: {
+    name: "Git",
+    url: "https://img.icons8.com/external-those-icons-flat-those-icons/100/external-Git-Logo-social-media-those-icons-flat-those-icons.png",
+    alt: "JWT Logo",
+    isFrontEnd: false,
+    isBackEnd: false,
+    isDevOps: true,
+  },
+  github: {
+    name: "Github",
+    url: "https://img.icons8.com/glyph-neue/100/github.png",
+    alt: "JWT Logo",
+    isFrontEnd: false,
+    isBackEnd: false,
+    isDevOps: true,
+  },
+  bitbucket: {
+    name: "Bitbucket",
+    url: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/100/external-bitbucket-is-a-web-based-version-control-repository-hosting-service-logo-shadow-tal-revivo.png",
+    alt: "JWT Logo",
+    isFrontEnd: false,
+    isBackEnd: false,
+    isDevOps: true,
+  },
 };
 
 export const iconsArray = Object.keys(iconsObject).map(

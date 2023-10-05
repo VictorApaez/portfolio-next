@@ -136,3 +136,14 @@ export const projects: ProjectType[] = [
     isLive: false,
   },
 ];
+
+export const favProjects = findProjects(
+  "The Book Swap",
+  "Snake Game",
+  "Code Vision",
+  "The Trailers"
+);
+
+function findProjects(...names: string[]) {
+  return projects.filter((project) => names.includes(project.name));
+}
