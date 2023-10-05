@@ -1,0 +1,7 @@
+.name-container {
+  columns: 150px;
+}
+
+.name-item {
+  break-inside: avoid;
+}
