@@ -4,6 +4,7 @@ import { iconsArray } from "@/data/icons";
 
 const icons = iconsArray;
 const titles = [
+  "Implementation Specialist",
   "Software Engineer",
   "Full Stack Developer",
   "Front End Developer",

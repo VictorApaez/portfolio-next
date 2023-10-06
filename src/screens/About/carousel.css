@@ -11,7 +11,7 @@
   animation-duration: 20s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  width: 1000px;
+  width: 1500px;
   justify-content: space-around;
   align-items: flex-start;
   position: absolute;
@@ -36,7 +36,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1000px);
+    transform: translateX(-1500px);
   }
 }
 
@@ -46,7 +46,7 @@
 
 @keyframes scroll2 {
   0% {
-    transform: translateX(1000px);
+    transform: translateX(1500px);
   }
   100% {
     transform: translateX(0%);
