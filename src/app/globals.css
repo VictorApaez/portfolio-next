@@ -13,9 +13,9 @@
   --accent-color-3: 0, 150, 200; /* rgb(0, 150, 200) */
 
   /* Text colors */
-  --text-color-header: 50, 50, 50; /* rgb(50, 50, 50) */
-  --text-color-primary: 80, 80, 80; /* rgb(80, 80, 80) */
-  --text-color-secondary: 200, 200, 200; /* rgb(250, 250, 250) */
+  --text-color-header: 220, 220, 220; /* rgb(150, 150, 150) */
+  --text-color-primary: 220, 220, 220; /* rgb(80, 80, 80) */
+  --text-color-secondary: 220, 220, 220; /* rgb(250, 250, 250) */
 
   /* Border color */
   --border-color-primary: 220, 220, 220; /* rgb(220, 220, 220) */
@@ -41,7 +41,27 @@
 body {
   font-family: "Helvetica";
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eb3a22;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #727272;
+}
 
 html {
   scroll-behavior: smooth;
+  background-color: #000000;
 }
