@@ -11,7 +11,7 @@ export const ThemeProvider = ({ children }) => {
       <body
         id="wrapper"
         className={`${theme === "dark" ? "dark-mode" : ""} bg-primary-1
-        text-content-primary`}
+        text-content-secondary`}
       >
         {children}
       </body>

@@ -3,41 +3,67 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="p-10 flex justify-center bg-gradient-180">
+    <section
+      id="contact"
+      className="p-5 md:p-40 flex  flex-col justify-center bg-gradient-180 min-h-screen"
+    >
       <div
-        className="rounded-2xl p-10 max-w-fit  bg-primary-2"
+        className="rounded-2xl p-2 flex h-full flex-wrap w-full justify-center"
         style={{
           boxShadow:
             "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px",
         }}
       >
-        <h2 className="text-xl">CONTACT</h2>
-        <h1 className="text-4xl text-content-primary mb-2">GET IN TOUCH</h1>
-        <h5 className="mb-4">
-          The best way to reach me is via
-          <Link
-            className="text-blue-400"
-            href="https://www.linkedin.com/in/victor-apaez"
-            target="_blank"
+        <div
+          className="w-1/2 flex flex-col place-items-center"
+          style={{ minWidth: "300px" }}
+        >
+          <h2 className="text-xl">CONTACT</h2>
+          <h1 className="text-4xl text-content-primary mb-2">Let's Chat!</h1>
+          <img src="me-thumbs-up.png" className="w-56" alt="" />
+        </div>
+        <div className=" h-full p-2 w-1/2" style={{ minWidth: "300px" }}>
+          <div
+            className="bg-black rounded-lg p-4 mb-5 w-full"
+            style={{ minWidth: "220px" }}
           >
-            {" "}
-            LinkedIn
-          </Link>
-          . Please feel free to send a message!
-        </h5>
-        <div className="bg-primary-3 rounded-lg p-4">
-          <Link
-            href="https://www.linkedin.com/in/victor-apaez"
-            className="flex place-items-center mb-1"
-            target="_blank"
-          >
-            <img
-              src="https://victorapaez.github.io/images/linkedin-logo.png"
-              className="h-10"
-            />
-            <h2 className="text-2xl">LinkedIn</h2>
-          </Link>
-          <p>www.linkedin.com/in/victor-apaez</p>
+            <Link
+              href="https://www.linkedin.com/in/victor-apaez"
+              className="flex place-items-center mb-1"
+              target="_blank"
+            >
+              <img
+                src="https://victorapaez.github.io/images/linkedin-logo.png"
+                className="w-10"
+              />
+              <h2 className="text-2xl">LinkedIn</h2>
+            </Link>
+            <p>www.linkedin.com/in/victor-apaez</p>
+          </div>
+
+          <div>
+            <div
+              className="bg-black rounded-lg p-4 mb-5 w-full"
+              style={{ minWidth: "220px" }}
+            >
+              <div className="flex place-items-center mb-1">
+                <a
+                  className="flex place-items-center"
+                  href="mailto:example@example.com?subject=Question from Website&body=Hello, I have a question about..."
+                >
+                  <img
+                    src="https://img.icons8.com/plasticine/65/new-post--v2.png"
+                    alt="email"
+                    className="w-10 mr-1"
+                  />
+
+                  <h2 className="text-2xl">Email</h2>
+                </a>
+              </div>
+              <p>vic.apaez@gmail.com</p>
+            </div>
+            <div></div>
+          </div>
         </div>
       </div>
     </section>

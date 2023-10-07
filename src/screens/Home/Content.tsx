@@ -16,32 +16,31 @@ type ContentProps = {
 
 export const Content: React.FC<ContentProps> = ({ y }) => {
   return (
-    <motion.div className="relative z-10 m-28 w-3/5  flex place-items-center flex-col text-content-primary">
+    <motion.div className="relative z-10 m-4 md:m-28 w-full md:w-3/5 flex place-items-center flex-col text-content-primary">
       <h1
-        className="font-bold text-9xl"
+        className="font-bold text-5xl md:text-9xl"
         style={{
           fontFamily: "Arial",
-          letterSpacing: "30px",
+          letterSpacing: "10px",
         }}
       >
         VICTOR
       </h1>
       <div
-        id="skills"
-        className="flex justify-center w-full h-12 py-2 rounded-md"
+        className="flex justify-center w-full h-8 md:h-12 py-1 md:py-2 rounded-md"
         style={{
-          backdropFilter: "blur(10px)", // This will create the blur effect
-          backgroundColor: "rgba(0, 0, 0, 0.8)", // Adjust this for the desired level of opacity
+          backdropFilter: "blur(10px)",
+          backgroundColor: "rgba(0, 0, 0, 0.8)",
         }}
       >
-        <div className="carousel-container  relative">
+        <div className="carousel-container relative">
           <div className="carousel-images-container scroll-1">
             {titles.map((title, i) => (
               <>
                 <div className="carousel-image-container">
-                  <p className=" bold text-3xl text">{title}</p>
+                  <p className="text-xl md:text-3xl">{title}</p>
                 </div>
-                <p className="text-white text-4xl">•</p>
+                <p className="text-white text-3xl md:text-4xl">•</p>
               </>
             ))}
           </div>
@@ -50,21 +49,20 @@ export const Content: React.FC<ContentProps> = ({ y }) => {
             {titles.map((title, i) => (
               <>
                 <div className="carousel-image-container">
-                  <p className=" bold text-3xl">{title}</p>
+                  <p className="text-xl md:text-3xl">{title}</p>
                 </div>
-                <p className="text-white text-4xl">•</p>
+                <p className="text-white text-3xl md:text-4xl">•</p>
               </>
             ))}
           </div>
         </div>
       </div>
       <h1
-        className="font-bold text-9xl"
-        style={{ fontFamily: "Arial", letterSpacing: "30px" }}
+        className="font-bold text-5xl md:text-9xl"
+        style={{ fontFamily: "Arial", letterSpacing: "10px" }} // reduced for mobile
       >
         APAEZ
       </h1>
-      {/* <img src="me-thumbs-up.png" style={{ width: 150 }} /> */}
     </motion.div>
   );
 };

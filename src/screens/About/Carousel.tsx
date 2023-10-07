@@ -6,10 +6,7 @@ const icons = iconsArray;
 
 export const Carousel = () => {
   return (
-    <section
-      id="skills"
-      className="flex justify-center w-full  absolute left-0 z-50 h-1/4 top-1/3 pl-[10%] pr-[10%]"
-    >
+    <section className="flex justify-center w-full  absolute left-0 z-50 h-1/4 top-1/3 pl-[10%] pr-[10%]">
       <div className="carousel-container  relative rounded-lg">
         <div className="carousel-images-container scroll-1">
           {icons.map((icon, i) => (

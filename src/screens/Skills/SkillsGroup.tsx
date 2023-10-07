@@ -5,7 +5,8 @@ type Icon = {
   name: string;
   url: string;
 };
-type SkillsGroup = {
+
+type SkillsGroupProps = {
   iconSrc: string;
   altText: string;
   title: string;
@@ -13,9 +14,10 @@ type SkillsGroup = {
   y?: MotionValue;
   x?: MotionValue;
   opacity: MotionValue;
-  scale: number;
+  scale?: number; // Made it optional since a default is provided
 };
-export const SkillGroup: React.FC<SkillsGroup> = ({
+
+export const SkillGroup: React.FC<SkillsGroupProps> = ({
   iconSrc,
   altText,
   title,
@@ -25,35 +27,29 @@ export const SkillGroup: React.FC<SkillsGroup> = ({
   opacity,
   scale = 1,
 }) => {
-  let styles;
-  if (x) {
-    styles = {
-      x: x,
-      opacity: opacity,
-      scale: scale, // <-- Add the scale transform here
-    };
-  } else {
-    styles = {
-      y: y,
-      opacity: opacity,
-      scale: scale, // <-- Add the scale transform here
-    };
-  }
+  const styles = {
+    ...(x ? { x } : { y }),
+    opacity,
+    scale,
+  };
+
   return (
     <motion.div
-      className={`bg-slate-500 p-5 rounded-xl w-full mx-5 flex flex-col place-items-center shadow-2xl mb-20 min-w-[200px] max-w-[380px]`}
+      className="bg-slate-500 p-5 rounded-xl w-full mx-2 my-10 md:my-0 flex flex-col place-items-center shadow-2xl mb-20 min-w-[200px] max-w-[380px]"
       style={styles}
     >
       <div className="flex flex-col place-items-center bg-slate-400 p-4 rounded-lg -mt-20 w-1/2 h-30 shadow-xl">
-        <img src={iconSrc} alt={altText} />
-        <h1 className="text-3xl text-content-header">{title}</h1>
+        <img src={iconSrc} alt={altText} className="w-10 md-w-20" />
+        <h1 className="text-xl md:text-3xl text-content-header ">{title}</h1>
       </div>
       <ul className="w-full name-container p-0 mt-10">
-        {icons.map((icon, i) => (
-          <li className="flex items-center mx-2 mb-4 min-w-1/4 max-w-1/3 name-item">
-            <img src={icon.url} className="w-6 mr-4" alt={icon.name} />
-            <p className="text-lg">{icon.name}</p>
-          </li>
+        {icons.map((icon, index) => (
+          <React.Fragment key={index}>
+            <li className="flex items-center mx-2 mb-4 min-w-1/4 max-w-1/3 name-item">
+              <img src={icon.url} className="w-6 mr-4" alt={icon.name} />
+              <p className="text-lg">{icon.name}</p>
+            </li>
+          </React.Fragment>
         ))}
       </ul>
     </motion.div>

@@ -20,7 +20,8 @@ export const Skills = () => {
 
   return (
     <section
-      className=" min-h-screen p-12 overflow-hidden bg-gradient-180"
+      id="skills"
+      className=" min-h-screen p-8 overflow-hidden bg-gradient-180 pt-32"
       ref={containerRef}
     >
       <SectionHeader header="Skills" />
@@ -32,7 +33,6 @@ export const Skills = () => {
           icons={backendIcons}
           x={x1}
           opacity={opacity}
-          scale={1} // <-- Make this group slightly larger
         />
         <SkillGroup
           iconSrc="https://img.icons8.com/pastel-glyph/64/code--v2.png"
@@ -41,7 +41,7 @@ export const Skills = () => {
           icons={frontendIcons}
           y={y1}
           opacity={opacity}
-          scale={1.13} // <-- Make this group slightly larger
+          scale={1.1}
         />
 
         <SkillGroup
@@ -51,7 +51,6 @@ export const Skills = () => {
           icons={devopsIcons}
           x={x3}
           opacity={opacity}
-          scale={1} // <-- Make this group slightly larger
         />
       </div>
     </section>

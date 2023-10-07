@@ -8,7 +8,9 @@ import { favProjects } from "../../data/projects";
 export default function Projects() {
   return (
     <section id="projects" className=" py-32 bg-gradient-0">
-      <SectionHeader header={"Things I have built"} />
+      <div className="mb-10">
+        <SectionHeader header={"Projects"} />
+      </div>
       <div>
         <ProjectDetails project={favProjects[0]} />
         <div className="flex">
