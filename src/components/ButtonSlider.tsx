@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+
+const audio = new Audio("no-sound.mp3");
+audio.loop = true; // This will make the audio repeat indefinitely
 
 function ButtonSlider() {
   const [isChecked, setIsChecked] = useState(false);
 
+  useEffect(() => {
+    if (isChecked) {
+      audio.currentTime = 0;
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }, [isChecked]);
   const handleToggle = () => {
     setIsChecked(!isChecked);
   };
@@ -21,7 +32,7 @@ function ButtonSlider() {
         className={`text-black absolute left-0 transition-opacity duration-300 p-2 ${
           isChecked ? "opacity-100" : "opacity-0"
         }`}
-        style={{ width: "40px" }}
+        style={{ width: "46px" }}
       />
       <img
         src="https://img.icons8.com/external-flat-zulfa-mahendra/48/external-half-moon-halloween-flat-zulfa-mahendra.png"
