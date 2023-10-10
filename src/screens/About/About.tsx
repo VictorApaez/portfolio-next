@@ -36,19 +36,23 @@ export default function About() {
             style={{ minWidth: "300px", maxWidth: "600px" }}
           >
             <div>
-              <p className=" leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                eligendi maxime, minus corporis iste fugiat quisquam dolore
-                aperiam. Quas harum, laudantium excepturi asperiores distinctio
-                pariatur alias modi quibusdam sint a unde eos ipsam enim
-                architecto.
+              <p className="">
+                Hello World! I'm Victor Apaez. As a Technical Integration
+                Specialist at LogicManager, I thrive on identifying challenges
+                and crafting solutions through code. In my spare time, I love to
+                build and learn new technologies.
               </p>
-              <p className=" leading-relaxed mt-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                eligendi maxime, minus corporis iste fugiat quisquam dolore
-                aperiam. Quas harum, laudantium excepturi asperiores distinctio
-                pariatur alias modi quibusdam sint a unde eos ipsam enim
-                architecto.
+              <p className="mt-5">
+                From crafting intricate backend architectures to designing
+                intuitive mobile and frontend interfaces, I take immense pride
+                in being an active member of the tech community and contributing
+                to its ongoing success.
+              </p>
+              <p className="mt-5">
+                Beyond the tech world, I am deeply passionate about personal
+                growth. Whether I'm capturing moments on canvas with my
+                paintings, breathing in the freshness of the outdoors, or
+                competing in a myriad of sports, every experience shapes me.
               </p>
               <div className="flex place-items-center mt-10">
                 <button className="bg-content-primary text-content-secondary font-bold py-2 px-4 rounded-lg inline-flex items-center">
