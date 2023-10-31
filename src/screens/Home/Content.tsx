@@ -18,7 +18,7 @@ export const Content: React.FC<ContentProps> = ({ y }) => {
   return (
     <motion.div className="relative z-10 m-4 md:m-28 w-full md:w-3/5 flex place-items-center flex-col text-content-primary">
       <h1
-        className="font-bold text-5xl md:text-9xl"
+        className="font-bold text-6xl md:text-9xl"
         style={{
           fontFamily: "Arial",
           letterSpacing: "10px",
@@ -36,23 +36,23 @@ export const Content: React.FC<ContentProps> = ({ y }) => {
         <div className="carousel-container relative">
           <div className="carousel-images-container scroll-1">
             {titles.map((title, i) => (
-              <>
+              <React.Fragment key={i}>
                 <div className="carousel-image-container">
                   <p className="text-xl md:text-3xl">{title}</p>
                 </div>
                 <p className="text-white text-3xl md:text-4xl">•</p>
-              </>
+              </React.Fragment>
             ))}
           </div>
 
           <div className="carousel-images-container scroll-2">
             {titles.map((title, i) => (
-              <>
+              <React.Fragment key={i}>
                 <div className="carousel-image-container">
                   <p className="text-xl md:text-3xl">{title}</p>
                 </div>
                 <p className="text-white text-3xl md:text-4xl">•</p>
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>

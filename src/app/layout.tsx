@@ -3,8 +3,6 @@ import "./globals.css";
 import { ThemeProvider } from "../context/ThemeProvider";
 import { useTheme } from "../context/ThemeProvider";
 import Header from "@/components/Header";
-import Footer from "@/screens/Footer/Footer";
-import ColorPalette from "@/screens/ColorPalette";
 import { SocialsBar } from "@/components/SocialsBar";
 import { FixedContent } from "@/components/FixedContent";
 

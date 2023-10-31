@@ -48,7 +48,7 @@ export const SocialsBar = () => {
               />
             </a>
           ) : (
-            <Link href={icon.link} key={i}>
+            <Link href={icon.link} key={i} target="_blank">
               <motion.img
                 src={icon.img}
                 alt={icon.alt}

@@ -10,7 +10,7 @@ export const Carousel = () => {
       <div className="carousel-container  relative rounded-lg">
         <div className="carousel-images-container scroll-1">
           {icons.map((icon, i) => (
-            <div className="carousel-image-container">
+            <div className="carousel-image-container" key={i}>
               <img
                 key={i}
                 className=""
@@ -23,7 +23,7 @@ export const Carousel = () => {
 
         <div className="carousel-images-container scroll-2">
           {icons.map((icon, i) => (
-            <div className="carousel-image-container ">
+            <div className="carousel-image-container " key={i}>
               <img
                 key={i}
                 className=""

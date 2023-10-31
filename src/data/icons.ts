@@ -121,7 +121,7 @@ export const iconsObject: IconsObject = {
     url: "https://img.icons8.com/fluency/100/typescript--v2.png",
     alt: "TypeScript Logo",
     isFrontEnd: true,
-    isBackEnd: true, // TypeScript can be used for backend as well
+    isBackEnd: true,
     isDevOps: false,
   },
   jwt: {
@@ -206,3 +206,4 @@ function filterByDomain(
 export const backendIcons = filterByDomain("backend");
 export const frontendIcons = filterByDomain("frontend");
 export const devopsIcons = filterByDomain("devops");
+export const fullStackIcons = [...new Set([...backendIcons, ...frontendIcons])];

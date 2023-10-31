@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const audio = new Audio("no-sound.mp3");
-audio.loop = true; // This will make the audio repeat indefinitely
+audio.loop = true;
 
 function ButtonSlider() {
   const [isChecked, setIsChecked] = useState(false);

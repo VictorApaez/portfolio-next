@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
 import { SectionHeader } from "@/components/SectionHeader";
-import { iconsArray } from "@/data/icons";
-import { HexBackground } from "./HexBackground";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { Carousel } from "./Carousel";
 
@@ -22,7 +20,7 @@ export default function About() {
         paddingRight: "5%",
 
         backgroundImage:
-          "url('hex-bg.svg'), linear-gradient(0deg, #000, #14213D)",
+          "url('rain-bg.svg'), linear-gradient(0deg, #000, #14213D)",
       }}
       ref={sectionRef}
     >
@@ -40,7 +38,7 @@ export default function About() {
                 Hello World! I'm Victor Apaez. As a Technical Integration
                 Specialist at LogicManager, I thrive on identifying challenges
                 and crafting solutions through code. In my spare time, I love to
-                build and learn new technologies.
+                build projects and learn new technologies.
               </p>
               <p className="mt-5">
                 From crafting intricate backend architectures to designing

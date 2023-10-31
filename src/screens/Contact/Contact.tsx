@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="p-5 md:p-40 flex  flex-col justify-center bg-gradient-180 min-h-screen"
+      className="p-5 md:p-40 flex  flex-col justify-center bg-gradient-0 min-h-screen"
     >
       <div
         className="rounded-2xl p-2 flex h-full flex-wrap w-full justify-center"

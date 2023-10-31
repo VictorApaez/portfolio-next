@@ -106,6 +106,16 @@ export const projects: ProjectType[] = [
     isLive: false,
   },
   {
+    githubLink: "https://github.com/VictorApaez/meow-madness",
+    imgUrl: "meow.jpg",
+    alt: "Image of Meow",
+    name: "Meow Madness",
+    shortDesc:
+      "Users can vote on each other's cat images, and the image with the highest number of votes is displayed in real-time.",
+    icons: [react, nodejs, express, mongodb],
+    isLive: false,
+  },
+  {
     githubLink: "https://github.com/VictorApaez/minesweeper-python",
     imgUrl: "minesweeper.png",
     alt: "Image of Minesweeper",
