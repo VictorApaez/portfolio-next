@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { Carousel } from "./Carousel";
+import Image from "next/image";
 
 export default function About() {
   const sectionRef = useRef(null);
@@ -75,11 +76,11 @@ export default function About() {
             style={{ minWidth: "300px" }}
           >
             <div className="relative">
-              <img src="cloud.svg" alt="" />
+              <Image src="cloud.svg" alt="" />
               <Carousel />
             </div>
 
-            <img
+            <Image
               src="me-computer.PNG"
               alt="Victor Apaez"
               className="w-1/2 -mt-24"

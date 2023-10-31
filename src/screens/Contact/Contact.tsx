@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -20,7 +21,7 @@ export default function Contact() {
         >
           <h2 className="text-xl">CONTACT</h2>
           <h1 className="text-4xl text-content-primary mb-2">Let's Chat!</h1>
-          <img src="me-thumbs-up.png" className="w-56" alt="" />
+          <Image src="me-thumbs-up.png" className="w-56" alt="" />
         </div>
         <div className=" h-full p-2 w-1/2" style={{ minWidth: "300px" }}>
           <div
@@ -32,9 +33,10 @@ export default function Contact() {
               className="flex place-items-center mb-1"
               target="_blank"
             >
-              <img
+              <Image
                 src="https://victorapaez.github.io/images/linkedin-logo.png"
                 className="w-10"
+                alt="linkedin"
               />
               <h2 className="text-2xl">LinkedIn</h2>
             </Link>
@@ -51,7 +53,7 @@ export default function Contact() {
                   className="flex place-items-center"
                   href="mailto:example@example.com?subject=Question from Website&body=Hello, I have a question about..."
                 >
-                  <img
+                  <Image
                     src="https://img.icons8.com/plasticine/65/new-post--v2.png"
                     alt="email"
                     className="w-10 mr-1"
