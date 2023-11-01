@@ -21,7 +21,7 @@ export default function Contact() {
         >
           <h2 className="text-xl">CONTACT</h2>
           <h1 className="text-4xl text-content-primary mb-2">Let's Chat!</h1>
-          <img src="/me-thumbs-up.png" className="w-56" alt="" />
+          <img src="/me-thumbs-up.PNG" className="w-56" alt="" />
         </div>
         <div className=" h-full p-2 w-1/2" style={{ minWidth: "300px" }}>
           <div
