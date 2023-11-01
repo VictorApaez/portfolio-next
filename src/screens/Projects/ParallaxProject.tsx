@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+"use client";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
 import { ProjectType } from "@/data/projects";
 import { Roboto } from "next/font/google";
@@ -31,7 +32,12 @@ export const ParallaxProject: React.FC<ProjectsProps> = ({ project }) => {
     setModalVisible(false);
   };
 
-  const distanceToTravel = window.innerHeight * 0.7;
+  const [distanceToTravel, setDistanceToTravel] = useState(0);
+
+  useEffect(() => {
+    setDistanceToTravel(window.innerHeight * 0.7);
+  }, []);
+
   const y = useTransform(scrollYProgress, [0, 1], [0, -distanceToTravel]);
 
   return (

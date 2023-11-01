@@ -76,12 +76,12 @@ export default function About() {
             style={{ minWidth: "300px" }}
           >
             <div className="relative">
-              <Image src="cloud.svg" alt="" />
+              <img src="/cloud.svg" alt="cloud" />
               <Carousel />
             </div>
 
-            <Image
-              src="me-computer.PNG"
+            <img
+              src="/me-computer.PNG"
               alt="Victor Apaez"
               className="w-1/2 -mt-24"
             />

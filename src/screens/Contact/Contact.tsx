@@ -21,7 +21,7 @@ export default function Contact() {
         >
           <h2 className="text-xl">CONTACT</h2>
           <h1 className="text-4xl text-content-primary mb-2">Let's Chat!</h1>
-          <Image src="me-thumbs-up.png" className="w-56" alt="" />
+          <img src="/me-thumbs-up.png" className="w-56" alt="" />
         </div>
         <div className=" h-full p-2 w-1/2" style={{ minWidth: "300px" }}>
           <div
@@ -33,7 +33,7 @@ export default function Contact() {
               className="flex place-items-center mb-1"
               target="_blank"
             >
-              <Image
+              <img
                 src="https://victorapaez.github.io/images/linkedin-logo.png"
                 className="w-10"
                 alt="linkedin"
@@ -53,7 +53,7 @@ export default function Contact() {
                   className="flex place-items-center"
                   href="mailto:example@example.com?subject=Question from Website&body=Hello, I have a question about..."
                 >
-                  <Image
+                  <img
                     src="https://img.icons8.com/plasticine/65/new-post--v2.png"
                     alt="email"
                     className="w-10 mr-1"

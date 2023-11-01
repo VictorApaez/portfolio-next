@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-const audio = new Audio("no-sound.mp3");
-audio.loop = true;
+// const audio = new Audio("no-sound.mp3");
+// audio.loop = true;
 
 function ButtonSlider() {
   const [isChecked, setIsChecked] = useState(false);
 
-  useEffect(() => {
-    if (isChecked) {
-      audio.currentTime = 0;
-      audio.play();
-    } else {
-      audio.pause();
-    }
-  }, [isChecked]);
+  // useEffect(() => {
+  //   if (isChecked) {
+  //     audio.currentTime = 0;
+  //     audio.play();
+  //   } else {
+  //     audio.pause();
+  //   }
+  // }, [isChecked]);
   const handleToggle = () => {
     setIsChecked(!isChecked);
   };
@@ -28,18 +29,22 @@ function ButtonSlider() {
       }}
     >
       <img
+        alt="sad sun"
         src="https://img.icons8.com/color/48/sad-sun.png"
         className={`text-black absolute left-0 transition-opacity duration-300 p-2 ${
           isChecked ? "opacity-100" : "opacity-0"
         }`}
-        style={{ width: "46px" }}
+        width={46}
+        height={46}
       />
       <img
+        alt="moon"
         src="https://img.icons8.com/external-flat-zulfa-mahendra/48/external-half-moon-halloween-flat-zulfa-mahendra.png"
         className={`absolute text-black right-0 transition-opacity duration-300 p-2 ${
           isChecked ? "opacity-0" : "opacity-100"
         }`}
-        style={{ width: "40px" }}
+        width={40}
+        height={40}
       />
       <motion.div
         className="w-8 h-8 bg-white rounded-full absolute z-10"
