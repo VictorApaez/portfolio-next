@@ -31,9 +31,11 @@ export default function AllProjects() {
         style={{ backgroundColor: " #182748" }}
       >
         {filteredIcons.map((icon, i) => (
-          <div className="m-2 flex flex-col justify-center place-items-center">
+          <div
+            className="m-2 flex flex-col justify-center place-items-center"
+            key={i}
+          >
             <img
-              key={i}
               src={icon.url}
               width={50}
               className={`mx-2 transform transition-all duration-150 hover:scale-125 cursor-pointer 
@@ -51,8 +53,8 @@ export default function AllProjects() {
       </div>
 
       <div className="flex flex-wrap -m-4 relative">
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.name} project={project} />
+        {filteredProjects.map((project, i) => (
+          <ProjectCard key={i} project={project} />
         ))}
       </div>
     </section>
