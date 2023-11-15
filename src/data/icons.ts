@@ -5,6 +5,7 @@ export type Icon = {
   isFrontEnd: boolean;
   isBackEnd: boolean;
   isDevOps: boolean;
+  filter: boolean;
 };
 
 export type IconsObject = {
@@ -19,6 +20,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: true,
     isBackEnd: false,
     isDevOps: false,
+    filter: false,
   },
   css3: {
     name: "CSS3",
@@ -27,6 +29,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: true,
     isBackEnd: false,
     isDevOps: false,
+    filter: false,
   },
   javascript: {
     name: "JavaScript",
@@ -35,6 +38,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: true,
     isBackEnd: true,
     isDevOps: false,
+    filter: true,
   },
   python: {
     name: "Python",
@@ -43,6 +47,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: false,
     isBackEnd: true,
     isDevOps: false,
+    filter: true,
   },
   reactnative: {
     name: "React Native",
@@ -51,6 +56,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: true,
     isBackEnd: false,
     isDevOps: false,
+    filter: true,
   },
   next: {
     name: "Next",
@@ -59,6 +65,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: true,
     isBackEnd: false,
     isDevOps: false,
+    filter: true,
   },
   react: {
     name: "React",
@@ -67,6 +74,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: true,
     isBackEnd: false,
     isDevOps: false,
+    filter: true,
   },
   mongodb: {
     name: "MongoDB",
@@ -75,6 +83,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: false,
     isBackEnd: true,
     isDevOps: false,
+    filter: true,
   },
   express: {
     name: "Express",
@@ -83,6 +92,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: false,
     isBackEnd: true,
     isDevOps: false,
+    filter: true,
   },
   nodejs: {
     name: "Node JS",
@@ -91,6 +101,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: false,
     isBackEnd: true,
     isDevOps: false,
+    filter: true,
   },
   redux: {
     name: "Redux",
@@ -99,6 +110,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: true,
     isBackEnd: false,
     isDevOps: false,
+    filter: true,
   },
   jest: {
     name: "Jest",
@@ -107,6 +119,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: true,
     isBackEnd: false,
     isDevOps: false,
+    filter: false,
   },
   tailwind: {
     name: "Tailwind",
@@ -115,6 +128,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: true,
     isBackEnd: false,
     isDevOps: false,
+    filter: false,
   },
   typescript: {
     name: "TypeScript",
@@ -123,6 +137,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: true,
     isBackEnd: true,
     isDevOps: false,
+    filter: true,
   },
   jwt: {
     name: "JWT",
@@ -131,6 +146,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: false,
     isBackEnd: true,
     isDevOps: false,
+    filter: true,
   },
   jira: {
     name: "Jira",
@@ -139,6 +155,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: false,
     isBackEnd: false,
     isDevOps: true,
+    filter: false,
   },
   confluence: {
     name: "Confluence",
@@ -147,6 +164,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: false,
     isBackEnd: false,
     isDevOps: true,
+    filter: false,
   },
   git: {
     name: "Git",
@@ -155,6 +173,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: false,
     isBackEnd: false,
     isDevOps: true,
+    filter: false,
   },
   github: {
     name: "Github",
@@ -163,6 +182,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: false,
     isBackEnd: false,
     isDevOps: true,
+    filter: false,
   },
   bitbucket: {
     name: "Bitbucket",
@@ -171,6 +191,7 @@ export const iconsObject: IconsObject = {
     isFrontEnd: false,
     isBackEnd: false,
     isDevOps: true,
+    filter: false,
   },
 };
 
@@ -207,3 +228,15 @@ export const backendIcons = filterByDomain("backend");
 export const frontendIcons = filterByDomain("frontend");
 export const devopsIcons = filterByDomain("devops");
 export const fullStackIcons = [...new Set([...backendIcons, ...frontendIcons])];
+export const filteredIcons = Object.keys(iconsObject)
+  .filter((key) => iconsObject[key].filter === true)
+  .map((key) => iconsObject[key]);
+
+let iconList = [
+  "javascript",
+  "python",
+  "react",
+  "next",
+  "reactnative",
+  "express",
+];

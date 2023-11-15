@@ -37,7 +37,7 @@ export const projects: ProjectType[] = [
     name: "The Book Swap",
     shortDesc:
       "Users can search for a specific book, or browse through a list of books available online.",
-    icons: [react, redux, express, nodejs, mongodb],
+    icons: [react, redux, express, nodejs, mongodb, javascript],
     isLive: true,
   },
   {
@@ -59,7 +59,7 @@ export const projects: ProjectType[] = [
     name: "The Trailers",
     shortDesc:
       "A Netflix replica, this web application has trailers for top rated, now playing,and current entertainment.",
-    icons: [react, html5, css3],
+    icons: [react, html5, css3, javascript],
     isLive: true,
   },
   {
@@ -70,7 +70,7 @@ export const projects: ProjectType[] = [
     name: "League of Legends",
     shortDesc:
       "This web application helps gamers search and build teams with their favorite characters and items.",
-    icons: [react, express, nodejs, jwt, mongodb],
+    icons: [react, express, nodejs, jwt, mongodb, javascript],
     isLive: true,
   },
   {
@@ -92,7 +92,7 @@ export const projects: ProjectType[] = [
     name: "Breddit",
     shortDesc:
       "Inspired by Reddit, this web application is a network of communities where people can share their interests and ideas.",
-    icons: [react, express, nodejs, mongodb],
+    icons: [react, express, nodejs, mongodb, javascript],
     isLive: true,
   },
   {
@@ -102,7 +102,7 @@ export const projects: ProjectType[] = [
     name: "Volunteer Connect",
     shortDesc:
       "This web application is designed for companies and users to find volunteer opportunities through posts and comments.",
-    icons: [react, redux, nodejs, jwt, mongodb],
+    icons: [react, redux, nodejs, jwt, mongodb, javascript],
     isLive: false,
   },
   {
@@ -112,7 +112,7 @@ export const projects: ProjectType[] = [
     name: "Meow Madness",
     shortDesc:
       "Users can vote on each other's cat images, and the image with the highest number of votes is displayed in real-time.",
-    icons: [react, nodejs, express, mongodb],
+    icons: [react, nodejs, express, mongodb, javascript],
     isLive: false,
   },
   {
@@ -144,6 +144,16 @@ export const projects: ProjectType[] = [
       "This project uses Python's turtle module to animate a drawing of a fractal tree.",
     icons: [python],
     isLive: false,
+  },
+  {
+    demoLink: "https://victor-apaez.vercel.app",
+    githubLink: "https://github.com/VictorApaez/portfolio-next",
+    imgUrl: "portfolio.png",
+    alt: "Portfolio Website",
+    name: "Portfolio",
+    shortDesc: "Learn more about me and the projects I have built.",
+    icons: [next, tailwind, typescript],
+    isLive: true,
   },
 ];
 
