@@ -75,12 +75,12 @@ export default function Header() {
               : "hidden"
           } `}
         >
-          <ul className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <ul className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 ">
             {navItems.map((item, i) => (
               <li key={item.name}>
                 <Link href={item.path}>
                   <div
-                    className="text-xl p-4 hover:bg-slate-500 rounded-lg transition-all duration-200 ease-in-out"
+                    className="text-xl p-4 hover:bg-slate-600 rounded-lg transition-all duration-200 ease-in-out my-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}

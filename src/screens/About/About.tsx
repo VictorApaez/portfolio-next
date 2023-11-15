@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { Carousel } from "./Carousel";
-import Image from "next/image";
 
 export default function About() {
   const sectionRef = useRef(null);
@@ -53,20 +52,25 @@ export default function About() {
                 paintings, breathing in the freshness of the outdoors, or
                 competing in a myriad of sports, every experience shapes me.
               </p>
-              <div className="flex place-items-center mt-10">
-                <button className="bg-content-primary text-content-secondary font-bold py-2 px-4 rounded-lg inline-flex items-center">
-                  <svg
-                    className="fill-current w-4 h-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-                  </svg>
-                  <span className="text-black">Resume</span>
-                </button>
-                <button className="bg-accent-2 font-bold py-2 px-4 rounded-lg ml-5">
+              <div className="flex items-center mt-10 space-x-5">
+                <a
+                  href="/Victor-Apaez-Resume.pdf"
+                  download="Victor-Apaez-Resume.pdf"
+                  className="bg-content-primary text-content-secondary font-bold py-2 px-4 rounded-lg inline-flex items-center"
+                >
+                  <img
+                    width={24}
+                    src="https://img.icons8.com/pastel-glyph/64/download--v1.png"
+                    alt="Download"
+                  />
+                  <span className="text-black text-md ml-2">Resume</span>
+                </a>
+                <a
+                  href="/#contact"
+                  className="bg-accent-2 font-bold py-2 text-md px-4 rounded-lg inline-flex items-center"
+                >
                   Contact
-                </button>
+                </a>
               </div>
             </div>
           </div>

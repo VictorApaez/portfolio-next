@@ -8,13 +8,7 @@ export default function Contact() {
       id="contact"
       className="p-5 md:p-40 flex  flex-col justify-center bg-gradient-0 min-h-screen"
     >
-      <div
-        className="rounded-2xl p-2 flex h-full flex-wrap w-full justify-center"
-        style={{
-          boxShadow:
-            "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px",
-        }}
-      >
+      <div className="rounded-2xl p-2 flex h-full flex-wrap w-full justify-center">
         <div
           className="w-1/2 flex flex-col place-items-center"
           style={{ minWidth: "300px" }}

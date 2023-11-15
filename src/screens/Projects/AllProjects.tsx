@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/screens/Projects/ProjectCard";
-import { fullStackIcons } from "@/data/icons";
+import { filteredIcons } from "@/data/icons";
 
 export default function AllProjects() {
   const [selectedIcon, setSelectedIcon] = useState<string | null>(null);
@@ -23,27 +23,30 @@ export default function AllProjects() {
 
   return (
     <section className="min-h-screen p-10 md:px-40 bg-gradient-180 relative">
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold mb-2">Filter by</h1>
+      <div className="mb-2">
+        <h1 className="text-2xl font-bold">Filter by Icon: </h1>
       </div>
       <div
-        className="flex flex-row flex-wrap mb-6 p-4 rounded-xl mb-"
+        className="flex flex-row flex-wrap p-4 rounded-xl mb-14 justify-center"
         style={{ backgroundColor: " #182748" }}
       >
-        {fullStackIcons.map((icon, i) => (
-          <img
-            key={i}
-            src={icon.url}
-            width={50}
-            className={`mx-2 transform transition-all duration-150 hover:scale-125 shadow-md hover:shadow-lg cursor-pointer 
+        {filteredIcons.map((icon, i) => (
+          <div className="m-2 flex flex-col justify-center place-items-center">
+            <img
+              key={i}
+              src={icon.url}
+              width={50}
+              className={`mx-2 transform transition-all duration-150 hover:scale-125 cursor-pointer 
             ${
               icon.name == selectedIcon
                 ? "border-4 border-red-500 rounded-full scale-125 p-2"
                 : ""
             }`}
-            alt={icon.alt}
-            onClick={() => toggleIconSelection(icon.name)}
-          />
+              alt={icon.alt}
+              onClick={() => toggleIconSelection(icon.name)}
+            />
+            <p>{icon.name}</p>
+          </div>
         ))}
       </div>
 
