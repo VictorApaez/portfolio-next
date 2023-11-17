@@ -63,7 +63,7 @@ export const projects: ProjectType[] = [
     isLive: true,
   },
   {
-    demoLink: "legendary-slayers-fe.vercel.app",
+    demoLink: "https://legendary-slayers-fe.vercel.app",
     githubLink: "https://github.com/durlinlin/Legendary-Slayers-FE",
     imgUrl: "LoL.png",
     alt: "Image of the web app League of Legends",
