@@ -31,8 +31,6 @@ Welcome to the repository of my Portfolio Website! This portfolio is a showcase 
    - **Tech Stack:** React, HTML5, CSS3, JavaScript.
    - **[Live Demo](https://thetrailers.netlify.app/) | [GitHub](https://github.com/VictorApaez/movie-trailers-app)**
 
-... _(Additional project details can be included following the same format)_
-
 ## Running the Project
 
 1. **Clone the repository:**
